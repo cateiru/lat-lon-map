@@ -1,5 +1,6 @@
-import { ServerRequest } from 'https://deno.land/std@0.67.0/http/server.ts';
+import { NowRequest, NowResponse } from "@vercel/node";
 
-export default async (req: ServerRequest) => {
-	req.respond({ body: `Hello, from Deno v${Deno.version.deno}!` });
+export default (request: NowRequest, response: NowResponse) => {
+  const { name = "World" } = request.query;
+  response.status(200).send(`Hello ${name}!`);
 };
