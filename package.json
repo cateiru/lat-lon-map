@@ -19,5 +19,9 @@
   },
   "scripts": {
     "build": "webpack"
+  },
+  "dependencies": {
+    "@types/ol": "^6.4.1",
+    "ol": "^6.4.3"
   }
 }
